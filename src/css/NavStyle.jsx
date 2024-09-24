@@ -4,9 +4,10 @@ export const NavStyle = styled.header `
 font-family: "Inter Tight", sans-serif;
 
 
-//background-color: blue; 
+background-color: #ffe9e9; 
 margin:0;
 padding:0;
+width: 100%;
 
 .nav{
     display: flex;
@@ -16,6 +17,7 @@ padding:0;
 
 .logos{
     display:flex;
+    align-items:center;
 }
 
 #logo1{
@@ -34,7 +36,7 @@ padding:0;
     width: 280px;
 }
 
-.links{
+.navigation-header{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -49,15 +51,43 @@ padding:0;
     text-decoration: none;
 }
 
-navLink::after {
+.navLink::after {
     text-decoration:underline;
     width: 0;  //Inicialmente a linha tem 0 largura  
     transition: width 0.3s ease-in-out;  //Animação suave 
     }
 
-navLink:hover::after {
+.navLink:hover::after {
     width: 100%; //A linha se expande para 100% do tamanho do link
 }
 
+.btn-icon-header{
+    display: none;
+    background-color: transparent;
+    border:none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .btn-icon-header{
+        display:block;
+    }
+
+
+.navigation-header {
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        background-color: var(--color-dark5);
+        height: 100%;
+        width: 35vw;
+        padding:1em;
+        animation-duration: 1s;
+        margin-left: -100vw;
+    
+}
+    
 
 `
+ 
