@@ -2,27 +2,24 @@ import {Link} from 'react-router-dom'
 import logo1 from  '../assets/formula-e-logo.png'
 import logo2 from  '../assets/logo-mahindra.png'
 import { NavStyle } from "../css/NavStyle.jsx"
+import { useState } from 'react'
+import { FaBars } from 'react-icons/fa6';
 
 
 
 
 const  Nav= () =>{
+    // const [isOpen, setIsOpen]= useState(false)
 
 
-    var navigationHeader= document.getElementById('navigation-header');
-    var showSideBar= false;
-
-    function toggleSideBar() {
-        showSideBar= !showSideBar;
-        if(showSideBar){
-            navigationHeader.style.marginLeft= '-10vw';
-            navigationHeader.style.animationName= 'showSideBar';
-        }else{
-            navigationHeader.style.marginLeft= '-100vw';
-            navigationHeader.style.animationName= '';
-        }
+    // const toggleSideBar= () => {
+    //     setIsOpen(! isOpen)
+    // };
+    const [isActive, setIsActive] = useState(false);
+ 
+    const toggleNavbar = () => {
+        setIsActive(!isActive);
     };
-
 
 
 
@@ -42,27 +39,24 @@ const  Nav= () =>{
                         </div>
                     </Link>
                     
-                    <div className="navigation-header">
-                        <button onClick={toggleSideBar} className="btn-icon-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16" >
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                            </svg>
-                        </button>
+                    <div className={`navbar ${isActive ? 'active' : ''}`}>
                         
+                        <Link to='/' className='navLink'>Home</Link>
+
                         <Link to='/classificacao' className='navLink'>Classificação</Link>
                         
                         <Link to='/corrida' className='navLink'>Corridas</Link>
                         
-                        <Link to='/highlights' className='navLink'>Highlights</Link>
-                        
-                        <Link to='/sustentabilidade' className='navLink'>Sustentabilidade</Link>
+                        {/* <Link to='/highlights' className='navLink'>Highlights</Link> */}
                         
                     </div>
-                    <button onClick={toggleSideBar} id="button" className="btn-icon-header">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
-                            <path  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    {/* Ícone de Fechar */}
+                    <div onClick={toggleNavbar} className="close-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
                         </svg>
-                    </button>
+                    </div>
+                    <div onClick={toggleNavbar} className='btn-icon-header'> <FaBars /></div>
                 
                 </div>
             </header>

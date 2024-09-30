@@ -5,9 +5,8 @@ import App from './App.jsx'
 import Home from './routes/Home'
 import Error from './routes/Error'
 import Corrida from './routes/Corrida.jsx'
-import Highlights from './routes/Highlights.jsx'
 import Classificacao from './routes/Classificacao.jsx'
-import Sustentabilidade from './routes/Sustentabilidade.jsx'
+// import Sustentabilidade from './routes/Sustentabilidade.jsx'
 
 
 const router= createBrowserRouter([
@@ -21,9 +20,8 @@ const router= createBrowserRouter([
     children:[
       {path:'/', element:<Home/>},
       {path:'/corrida', element:<Corrida/>},
-      {path:'/highlights', element:<Highlights/>},
       {path:'/classificacao', element:<Classificacao/>},
-      {path:'/sustentabilidade', element:<Sustentabilidade/>},
+      // {path:'/sustentabilidade', element:<Sustentabilidade/>},
     ]
   }
 ])

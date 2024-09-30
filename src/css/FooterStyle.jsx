@@ -1,11 +1,13 @@
 import styled from "styled-components";
 export const FooterStyle =styled.footer `
+
 footer {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     flex-direction: column;  /* Coloca as divs em coluna */
-    padding: 20px;
+    padding: 0px;
+    margin: 0;
     position: relative;
     bottom: 0%;
     width: 100%;
