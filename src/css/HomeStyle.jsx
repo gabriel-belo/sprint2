@@ -22,7 +22,7 @@ width: 100%;
     color: black;
 }
 
-.section.slider{
+section.slider{
     margin: 0 auto;
     width: 100%;
     height: auto;
@@ -91,6 +91,76 @@ width: 100%;
     margin-left: -50%;
 }
 
+
+// .section.slider{
+//     margin: 0 auto;
+//     width: 100%;
+//     height: auto;
+//     padding: 0;
+//     overflow: hidden;
+//     background-image: linear-gradient(to top right, #353535, #dddddd);
+// }
+
+// .slider-content{
+//     width: 400%;
+//     height: auto;
+//     display: flex;
+// }
+
+// .slider-content input, .img-mobile{
+//     display: none;
+// }
+
+// .slide-box{
+//     width: 25%;
+//     height: auto;
+//     position: relative;
+//     text-align: center;
+//     transition: 1s;
+// }
+
+// .slide-box img{
+//     width: 100%;
+// }
+
+// .nav-manual, .nav-auto{
+//     position: absolute;
+//     width: 100%;
+//     margin-top: 45%;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .nav-manual .manual-btn, .nav-auto div{
+//     border: 1px solid #e00606;
+//     padding: 10px;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     transition: 0.2s;
+// }
+
+// .nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+//     margin-right: 10px;
+// }
+
+// .nav-manual .manual-btn:hover{
+//     background-color: #e00606;
+// }
+
+// #radio1:checked ~ .nav-auto .nav-btn1, #radio2:checked ~ .nav-auto .nav-btn2, #radio3:checked ~ .nav-auto .nav-btn3{
+//     background-color: #e00606;
+// }
+
+// #radio1:checked ~ .primeiro{
+//     margin-left: 0%;
+// }
+// #radio2:checked ~ .primeiro{
+//     margin-left: -25%;
+// }
+// #radio3:checked ~ .primeiro{
+//     margin-left: -50%;
+// }
+
 /*Corridas*/
 
 .calendario{
@@ -127,10 +197,26 @@ width: 100%;
 .info-pais{
     display: flex;
     text-align: center;
+    font-weigth: 200px;
+    font-size: 1.5rem;
 }
-.img-bandeira{
-    width: 65px;
-    height: 45px;
+
+.info-pais img, .corrida img.img-bandeira {
+  width: 40px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.info-pais p, .corrida p {
+  margin: 0;
+  text-align: center;
+}
+
+.border {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin: 10px 0;
 }
 
 .button{

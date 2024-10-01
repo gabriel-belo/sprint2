@@ -9,11 +9,6 @@ margin:0;
 padding:0;
 width: 100%;
 
-.nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 
 .logos{
     display:flex;
@@ -45,6 +40,29 @@ width: 100%;
     padding-right: 20px;
 }
 
+
+.nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #fff;
+        z-index: 10;
+}
+
+
+
+// Quando o menu está aberto 
+.navbar.active {
+        width: 250px; 
+        //display: block; 
+        display: flex;
+        flex-direction: column;  
+        justify-content: space-evenly;
+        gap: 5px;
+
+}
 .navLink{
     color: black; //aliceblue;
     padding: 10px 25px;
@@ -53,8 +71,15 @@ width: 100%;
     margin: 0 5px;
     font-size:20px;
     font: bold;
-    color: black;
     text-decoration: none;
+}
+
+.navLink {
+        color: black;
+        padding: 15px 20px;
+        display: block;
+        text-align: left;
+        text-decoration: none;
 }
 
 .navLink::after {
@@ -67,70 +92,34 @@ width: 100%;
     width: 100%; //A linha se expande para 100% do tamanho do link
 }
 
-
- 
 .navLink:hover{
     background: white;
 }
 
-.nav {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #fff;
-        z-index: 10;
-        }
-
-        /* Menu lateral inicialmente escondido */
-.navbar {
-        display: none;
-        position: fixed; /* Para manter o menu fixo na tela */
-        top: 0;
-        right: 0; /* Fixa o menu no lado direito da tela */
-        height: 100vh; /* Faz o menu ocupar a altura total da tela */
-        width: 0; /* Menu começa invisível com largura 0 */
-        background-color: #333; /* Cor de fundo do menu */
-        z-index: 100;
-        overflow-x: hidden; /* Esconde o conteúdo quando o menu está fechado */
-        transition: 0.3s ease; /* Animação suave para o aparecimento do menu */
-}
-
-        /* Quando o menu está aberto */
-.navbar.active {
-        width: 250px; /* Define a largura do menu quando ativo */
-        display: block; /* Exibe o menu */
-}
-
-        /* Links de navegação */
-.navLink {
-        color: #fff;
-        padding: 15px 20px;
-        display: block;
-        text-align: left;
-        text-decoration: none;
-}
-
- /* Estilo básico do ícone de fechar */
+// Estilo básico do ícone de fechar 
 .close-icon {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 120px;
   cursor: pointer;
-  display: none; /* Inicialmente escondido */
+  display: none; 
+  margin-left: auto; 
+  margin-right: auto;
+
 }
 
-/* Exibe o ícone de fechar quando o menu está ativo */
-.close-icon.active {
+
+//Exibe o ícone de fechar quando o menu está ativo 
+.navbar.active .close-icon {
   display: block;
 }
+
 
 .btn-icon-header{
     display: none;
     background-color: transparent;
     border:none;
-    color: var(--color-white);
+    color: black;
     cursor: pointer;
     font-size: 1.5rem;
      
@@ -159,20 +148,17 @@ width: 100%;
         display:block;
     }
 
-    // .navbar{
-    //     height: 0;
-    //     position: absolute;
-    //     top: 80px;
-    //     left: 0;
-    //     right: 0;
-    //     width: 100vw;
-    //     transition: 0.2s;
-    //     background: #010146 ;
-    //     overflow: hidden;
-    // }
-    // .navbar.active {
-    //     height: 450px;
-    // }
+    .navbar{
+        display: none;
+        position: fixed; 
+        top: 0;
+        right: 0; 
+        height: 100vh; 
+        background-color: #333; 
+        z-index: 100;
+        overflow-x: hidden; 
+        transition: 0.3s ease; 
+    }
 
 
     

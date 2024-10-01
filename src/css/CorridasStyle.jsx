@@ -42,6 +42,8 @@ font-family: "Inter Tight", sans-serif;
 .info-pais{
     display: flex;
     text-align: center;
+    font-weigth: 200px;
+    font-size: 1.5rem;
 }
 .img-bandeira{
     width: 65px;

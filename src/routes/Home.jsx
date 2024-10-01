@@ -9,6 +9,9 @@ import Noticia1 from '../assets/noticias/noticia1.webp'
 import Noticia2 from '../assets/noticias/noticia2.webp'
 import Pista1 from '../assets/pistas/pista1.svg'
 import Pista2 from '../assets/pistas/pista2.svg'
+
+
+
 const  Home= () =>{
     return(
         <>
@@ -63,10 +66,10 @@ const  Home= () =>{
                                         <h1>1º Corrida</h1>
                                         <h3>Jan 13, 2024</h3>
                                         <div className='border'></div>
-                                        {/* <div className="info-pais"> */}
+                                        <div className="info-pais">
                                             <img src={Mexico} className="img-bandeira" alt="" />
                                             <p>Cidade do México</p>
-                                        {/* </div> */}
+                                        </div>
                             </div>
                             <div className="corrida">
                                         <div className='circuito'>
@@ -75,8 +78,10 @@ const  Home= () =>{
                                         <h1>2º Corrida</h1>
                                         <h3>Jan 26, 2024</h3>
                                         <div className='border'></div>
-                                        <img src={ArabiaSaudita} className="img-bandeira" alt="" />
-                                        <p>Diriyah</p>
+                                        <div className='info-pais'>
+                                            <img src={ArabiaSaudita} className="img-bandeira" alt="" />
+                                            <p>Diriyah</p>
+                                        </div>
                             </div>
                             <div className="corrida">
                                         <div className='circuito'>
@@ -85,8 +90,10 @@ const  Home= () =>{
                                         <h1>3º Corrida</h1>
                                         <h3>Jan 27, 2024</h3>
                                         <div className='border'></div>
-                                        <img src={ArabiaSaudita}  className="img-bandeira" alt="" />
-                                        <p>DIRIYAH</p>
+                                        <div className='info-pais'>
+                                            <img src={ArabiaSaudita} className="img-bandeira" alt="" />
+                                            <p>Diriyah</p>
+                                        </div>
                             </div>
                         </div>
                     </div>
