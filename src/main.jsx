@@ -6,7 +6,7 @@ import Home from './routes/Home'
 import Error from './routes/Error'
 import Corrida from './routes/Corrida.jsx'
 import Classificacao from './routes/Classificacao.jsx'
-// import Sustentabilidade from './routes/Sustentabilidade.jsx'
+import Game from './routes/Game.jsx'
 
 
 const router= createBrowserRouter([
@@ -21,7 +21,7 @@ const router= createBrowserRouter([
       {path:'/', element:<Home/>},
       {path:'/corrida', element:<Corrida/>},
       {path:'/classificacao', element:<Classificacao/>},
-      // {path:'/sustentabilidade', element:<Sustentabilidade/>},
+      {path:'/game', element:<Game/>},
     ]
   }
 ])

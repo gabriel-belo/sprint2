@@ -1,4 +1,3 @@
-// import {Link} from 'react-router-dom'
 import { FooterStyle } from '../css/FooterStyle.jsx';
 import { CgInstagram } from "react-icons/cg";
 import { CgFacebook } from "react-icons/cg";

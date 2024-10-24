@@ -1,0 +1,158 @@
+{
+    "rodada1": {
+        "pergunta": "Qual o piloto com mais vitórias na história da Formula 1?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Michael Schumacher",
+                "vitorias": 91
+            },
+            {
+                "id": 2,
+                "nome": "Ayrton Senna",
+                "vitorias": 41
+            },
+            {
+                "id": 3,
+                "nome": "Lewis Hamilton",
+                "vitorias": 100
+            },
+            {
+                "id": 4,
+                "nome": "Max Verstappen",
+                "vitorias": 68
+            }
+        ],
+        "resposta": "Michael Schumacher"
+    },
+    "rodada2": {
+        "pergunta": "Qual piloto foi campeão em 2021 na Formula 1?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Lewis Hamilton",
+                "vitorias": 100
+            },
+            {
+                "id": 2,
+                "nome": "Max Verstappen",
+                "vitorias": 68
+            },
+            {
+                "id": 3,
+                "nome": "Sebastian Vettel",
+                "vitorias": 53
+            },
+            {
+                "id": 4,
+                "nome": "Valtteri Bottas",
+                "vitorias": 10
+            }
+        ],
+        "resposta": "Max Verstappen"
+    },
+    "rodada3": {
+        "pergunta": "Qual piloto brasileiro venceu 3 campeonatos de Formula 1?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Ayrton Senna",
+                "vitorias": 41
+            },
+            {
+                "id": 2,
+                "nome": "Emerson Fittipaldi",
+                "vitorias": 14
+            },
+            {
+                "id": 3,
+                "nome": "Nelson Piquet",
+                "vitorias": 23
+            },
+            {
+                "id": 4,
+                "nome": "Rubens Barrichello",
+                "vitorias": 11
+            }
+        ],
+        "resposta": "Nelson Piquet"
+    },
+    "rodada4": {
+        "pergunta": "Qual piloto venceu o campeonato de Formula 1 em 2009?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Jenson Button",
+                "vitorias": 15
+            },
+            {
+                "id": 2,
+                "nome": "Lewis Hamilton",
+                "vitorias": 100
+            },
+            {
+                "id": 3,
+                "nome": "Sebastian Vettel",
+                "vitorias": 53
+            },
+            {
+                "id": 4,
+                "nome": "Nico Rosberg",
+                "vitorias": 23
+            }
+        ],
+        "resposta": "Jenson Button"
+    },
+    "rodada5": {
+        "pergunta": "Qual piloto venceu o campeonato de Formula 1 em 2016?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Sebastian Vettel",
+                "vitorias": 53
+            },
+            {
+                "id": 2,
+                "nome": "Lewis Hamilton",
+                "vitorias": 100
+            },
+            {
+                "id": 3,
+                "nome": "Nico Rosberg",
+                "vitorias": 23
+            },
+            {
+                "id": 4,
+                "nome": "Fernando Alonso",
+                "vitorias": 32
+            }
+        ],
+        "resposta": "Nico Rosberg"
+    },
+    "rodada6": {
+        "pergunta": "Qual piloto foi o primeiro a vencer um titulo na era hibrida da Formula 1 (2014)?",
+        "respostas": [
+            {
+                "id": 1,
+                "nome": "Nico Rosberg",
+                "vitorias": 23
+            },
+            {
+                "id": 2,
+                "nome": "Lewis Hamilton",
+                "vitorias": 100
+            },
+            {
+                "id": 3,
+                "nome": "Sebastian Vettel",
+                "vitorias": 53
+            },
+            {
+                "id": 4,
+                "nome": "Daniel Ricciardo",
+                "vitorias": 8
+            }
+        ],
+        "resposta": "Lewis Hamilton"
+    }
+}

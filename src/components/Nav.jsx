@@ -61,7 +61,7 @@ const  Nav= () =>{
                         
                         <Link to='/corrida' className='navLink'>Corridas</Link>
                         
-                        {/* <Link to='/highlights' className='navLink'>Highlights</Link> */}
+                        <Link to='/game' className='navLink'>Game</Link>
 
                     </div>
                     <div onClick={toggleNavbar} className='btn-icon-header'> <FaBars /></div>
