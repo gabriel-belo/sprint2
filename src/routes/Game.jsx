@@ -1,40 +1,56 @@
 import { GameStyle } from "../css/GameStyle.jsx";
 import { useState, useEffect } from "react";
+import axios from 'axios';
 import dados from '../dados.json';
-import registro from "../registros.json"; // Importa os dados do jogador
 
 const Game = () => {
-  const [time, setTime] = useState(20); // Estado para armazenar o tempo
-  const [isRunning, setIsRunning] = useState(false); // Estado para controle de execução
-  const [rodadaAtual, setRodadaAtual] = useState(1); // Estado para controlar a rodada atual
-  const [respostaSelecionada, setRespostaSelecionada] = useState(null); // Estado da resposta selecionada
-  const [bloquearEscolha, setBloquearEscolha] = useState(false); // Estado para bloquear novas escolhas
-  const [mostrarModal, setMostrarModal] = useState(false); // Estado para controlar exibição do modal
-  const [respostaCorreta, setRespostaCorreta] = useState(null); // Estado para armazenar a resposta correta
-  const [pontuacao, setPontuacao] = useState(registro.jogador1.pontuação); // Estado para a pontuação
+  const [time, setTime] = useState(20);
+  const [isRunning, setIsRunning] = useState(false);
+  const [rodadaAtual, setRodadaAtual] = useState(1);
+  const [respostaSelecionada, setRespostaSelecionada] = useState(null);
+  const [bloquearEscolha, setBloquearEscolha] = useState(false);
+  const [mostrarModal, setMostrarModal] = useState(false);
+  const [respostaCorreta, setRespostaCorreta] = useState(null);
+  const [jogadores, setJogadores] = useState([]);
 
   useEffect(() => {
     let interval;
-
     if (isRunning && time > 0) {
       interval = setInterval(() => {
         setTime((prevTime) => {
           if (prevTime === 1) {
-            stopCronometro(); // Para o cronômetro quando o tempo chegar a zero
-            fimDaRodada(); // Considera o fim da rodada
+            stopCronometro();
+            fimDaRodada();
           }
           return prevTime - 1;
         });
       }, 1000);
     }
-
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar ou pausar
+    return () => clearInterval(interval);
   }, [isRunning, time]);
 
   useEffect(() => {
-    // Sempre que a rodada iniciar, o cronômetro é automaticamente iniciado
     startCronometro();
   }, [rodadaAtual]);
+
+  useEffect(() => {
+    const carregarJogadores = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/registros');
+        const { jogador1, jogador2 } = response.data;
+
+        const jogadoresArray = [];
+        if (jogador1) jogadoresArray.push({ ...jogador1, pontuacao: jogador1.pontuacao || 0 });
+        if (jogador2) jogadoresArray.push({ ...jogador2, pontuacao: jogador2.pontuacao || 0 });
+
+        setJogadores(jogadoresArray);
+      } catch (error) {
+        console.error('Erro ao carregar os dados dos jogadores:', error);
+      }
+    };
+
+    carregarJogadores();
+  }, [rodadaAtual, mostrarModal]);
 
   const startCronometro = () => {
     setIsRunning(true);
@@ -50,47 +66,71 @@ const Game = () => {
   };
 
   const fimDaRodada = () => {
-    setBloquearEscolha(true); // Bloqueia novas escolhas
-    setTimeout(() => {
-      setMostrarModal(true); // Exibe o modal após 3 segundos
-    }, 2000);
+    setBloquearEscolha(true);
+    setMostrarModal(true); // Exibe o modal logo após a rodada
     stopCronometro();
-    resetCronometro(); // Reseta o cronômetro para a próxima rodada
+    resetCronometro();
   };
 
   const escolherResposta = (nome) => {
     if (!bloquearEscolha) {
       setRespostaSelecionada(nome);
-      const respostaCerta = rodada.resposta === nome; // Verifica se a resposta está correta
+      const respostaCerta = rodada.resposta === nome;
       setRespostaCorreta(respostaCerta);
 
       if (respostaCerta) {
-        atualizarPontuacao(10); // Incrementa 10 pontos se a resposta for correta
+        const jogadorAtual = jogadores.find((jogador) => jogador.nome === nome);
+        if (jogadorAtual) {
+          atualizarPontuacao(jogadorAtual, 10);
+        }
       }
-
-      fimDaRodada(); // Marca o fim da rodada quando uma resposta é escolhida
-      console.log(`Você escolheu: ${nome}`);
+      fimDaRodada();
     }
   };
 
-  const atualizarPontuacao = (pontos) => {
-    setPontuacao((prevPontuacao) => prevPontuacao + pontos); // Atualiza a pontuação no estado
-    console.log(`Pontuação atualizada: ${pontuacao + pontos}`);
+  const atualizarPontuacao = (jogador, pontos) => {
+    // Atualiza a pontuação no estado local
+    setJogadores((prevJogadores) =>
+      prevJogadores.map((j) =>
+        j.nome === jogador.nome ? { ...j, pontuacao: j.pontuacao + pontos } : j
+      )
+    );
+
+    // Envia atualização ao backend e carrega os dados atualizados
+    axios
+      .post('http://localhost:3000/update-registros', {
+        jogadorAtualizado: { ...jogador, pontuacao: jogador.pontuacao + pontos },
+      })
+      .then(async (response) => {
+        console.log('Pontuação atualizada no servidor:', response.data.message);
+
+        // Recarrega os dados do backend para garantir que o estado reflete o JSON atualizado
+        const responseAtualizado = await axios.get('http://localhost:3000/registros');
+        const { jogador1, jogador2 } = responseAtualizado.data;
+        const jogadoresAtualizados = [];
+
+        if (jogador1) jogadoresAtualizados.push({ ...jogador1, pontuacao: jogador1.pontuacao || 0 });
+        if (jogador2) jogadoresAtualizados.push({ ...jogador2, pontuacao: jogador2.pontuacao || 0 });
+
+        setJogadores(jogadoresAtualizados);
+      })
+      .catch((error) => {
+        console.error('Erro ao atualizar a pontuação no servidor:', error);
+      });
   };
 
   const proximaRodada = () => {
     if (rodadaAtual < Object.keys(dados).length) {
       setRodadaAtual(rodadaAtual + 1);
-      setRespostaSelecionada(null); // Reseta a resposta selecionada
-      setBloquearEscolha(false); // Desbloqueia a escolha para a próxima rodada
-      setMostrarModal(false); // Fecha o modal e vai para a próxima rodada
-      setRespostaCorreta(null); // Reseta o estado da resposta correta
+      setRespostaSelecionada(null);
+      setBloquearEscolha(false);
+      setMostrarModal(false);
+      setRespostaCorreta(null);
     } else {
       alert('Fim do Quiz!');
     }
   };
 
-  // Acessa os dados da rodada atual
   const rodadaChave = `rodada${rodadaAtual}`;
   const rodada = dados[rodadaChave];
 
@@ -104,8 +144,6 @@ const Game = () => {
             <button onClick={stopCronometro}>Parar</button>
           </div>
 
-
-          {/* Modal que aparece após a escolha da resposta ou fim do tempo */}
           <div className="cart-modal" style={{ display: mostrarModal ? 'flex' : 'none' }}>
             <div className="modal-content">
               <h2 className="modal-title">Pontuação</h2>
@@ -118,10 +156,12 @@ const Game = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th>{registro.jogador1.nome}</th>
-                      <th>{pontuacao}</th>
-                    </tr>
+                    {jogadores.map((jogador, index) => (
+                      <tr key={index}>
+                        <th>{jogador.nome}</th>
+                        <th>{jogador.pontuacao}</th>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -132,7 +172,6 @@ const Game = () => {
             </div>
           </div>
 
-          {/* Perguntas e Respostas */}
           <div>
             <h1>{rodada.pergunta}</h1>
             <div className="respostas">
@@ -143,12 +182,12 @@ const Game = () => {
                   className={`teste ${respostaSelecionada === piloto.nome ? 'selecionada' : ''}`}
                   id={`resposta${piloto.id}`}
                   style={{
-                    pointerEvents: bloquearEscolha ? 'none' : 'auto', // Desativa o clique após a escolha
+                    pointerEvents: bloquearEscolha ? 'none' : 'auto',
                     border: respostaSelecionada === piloto.nome
                       ? respostaCorreta
-                        ? '2px solid green' // Verde se estiver correto
-                        : '2px solid red' // Vermelho se estiver incorreto
-                      : '1px solid gray' // Padrão para as opções não selecionadas
+                        ? '2px solid green'
+                        : '2px solid red'
+                      : '1px solid gray'
                   }}
                 >
                   <p className="resposta">{piloto.nome}</p>

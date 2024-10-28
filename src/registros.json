@@ -1,6 +1,7 @@
 {
-    "jogador1":{
-        "nome": "João",
-        "pontuação":0
-    }
+  "jogador1": {
+    "nome": "Gabriel",
+    "pontuação": 0
+  },
+  "codigo": "12345"
 }

@@ -7,6 +7,9 @@ import Error from './routes/Error'
 import Corrida from './routes/Corrida.jsx'
 import Classificacao from './routes/Classificacao.jsx'
 import Game from './routes/Game.jsx'
+import CriarSala from './routes/CriarSala.jsx'
+import EntrarSala from './routes/EntrarSala.jsx'
+import Sala from './routes/Sala.jsx'
 
 
 const router= createBrowserRouter([
@@ -22,6 +25,9 @@ const router= createBrowserRouter([
       {path:'/corrida', element:<Corrida/>},
       {path:'/classificacao', element:<Classificacao/>},
       {path:'/game', element:<Game/>},
+      {path: '/criarSala', element: <CriarSala/>},
+      {path:'/entrarSala', element: <EntrarSala/>},
+      {path:'/sala', element: <Sala />}
     ]
   }
 ])
