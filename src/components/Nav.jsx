@@ -61,7 +61,9 @@ const  Nav= () =>{
                         
                         <Link to='/corrida' className='navLink'>Corridas</Link>
                         
-                        <Link to='/game' className='navLink'>Game</Link>
+                        {/* <Link to='/game' className='navLink'>Game</Link> */}
+
+                        <Link to="/supertrunfo" className='navLink'>SuperTrunfo</Link>
 
                     </div>
                     <div onClick={toggleNavbar} className='btn-icon-header'> <FaBars /></div>

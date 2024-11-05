@@ -10,6 +10,7 @@ import Game from './routes/Game.jsx'
 import CriarSala from './routes/CriarSala.jsx'
 import EntrarSala from './routes/EntrarSala.jsx'
 import Sala from './routes/Sala.jsx'
+import SuperTrunfo from './routes/SuperTrunfo.jsx'
 
 
 const router= createBrowserRouter([
@@ -27,7 +28,8 @@ const router= createBrowserRouter([
       {path:'/game', element:<Game/>},
       {path: '/criarSala', element: <CriarSala/>},
       {path:'/entrarSala', element: <EntrarSala/>},
-      {path:'/sala', element: <Sala />}
+      {path:'/sala', element: <Sala />},
+      {path:'/superTrunfo', element: <SuperTrunfo />}
     ]
   }
 ])

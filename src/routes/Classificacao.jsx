@@ -40,6 +40,7 @@ import piloto27 from '../assets/pilotos/piloto27.png';
 import piloto28 from '../assets/pilotos/piloto28.png';
 
 
+
 // INFOS
 // P = Piloto garantido (verde)
 // FL= Volta mais rápida (Roxo)

@@ -1,5 +1,5 @@
 import Nav from './components/Nav'
-import Footer from './components/Footer'
+// import Footer from './components/Footer'
 
 
 
@@ -12,7 +12,7 @@ function App() {
     <>
     <Nav />
     <Outlet />
-    <Footer />
+    {/* <Footer /> */}
       
     </>
   )

@@ -62,7 +62,7 @@ const Game = () => {
 
   const resetCronometro = () => {
     setIsRunning(false);
-    setTime(20);
+    setTime(10);
   };
 
   const fimDaRodada = () => {
@@ -140,8 +140,8 @@ const Game = () => {
         <div className="principal">
           <div className="cronometro">
             <p className="tempo">00:{time}</p>
-            <button onClick={startCronometro}>Iniciar</button>
-            <button onClick={stopCronometro}>Parar</button>
+            {/* <button onClick={startCronometro}>Iniciar</button>
+            <button onClick={stopCronometro}>Parar</button> */}
           </div>
 
           <div className="cart-modal" style={{ display: mostrarModal ? 'flex' : 'none' }}>

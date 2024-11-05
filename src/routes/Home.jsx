@@ -53,11 +53,11 @@ const  Home= () =>{
                     </div>
                 </section>
 
-                <section className='game'>
+                {/* <section className='game'>
                     <h1>Venha jogar</h1>
                     <Link to='/criarSala' className='homeLink'>Criar Sala</Link>
-                    <Link to='/entrarSala' className='homeLink'>Entrar na Sala</Link>
-                </section>
+                    {/* <Link to='/entrarSala' className='homeLink'>Entrar na Sala</Link> 
+                </section> */}
 
                 <section className='calendario'>
                     <div className='estrutura-titulo'>

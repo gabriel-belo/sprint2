@@ -25,7 +25,7 @@ const Sala = () => {
     }, []);
 
     const mudarPagina= () => {
-      navigate("/game")
+      navigate("/superTrunfo")
     }
     return (
         <SalaStyle>

@@ -1,0 +1,273 @@
+{
+  
+  "carta01":{
+    "nome": "Nick De Vries",
+    "equipe":"Mahindra",
+    "avatar":  "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/8bd68290-c0ad-43b6-a1ce-ee162b7d8914.png",
+    "atributos": {
+      "Vitorias": 4,
+      "Corridas":56,
+      "Podios": 8,
+      "Pontos": 283
+    }
+  },
+  
+  "carta02":{
+    "nome": "Antonio Da Costa",
+    "equipe":"TAG Heuer Porsche Formula E Team ",
+    "avatar":    "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/fcc99980-3e5d-4a96-856a-8773641ceebe.png",
+    "atributos": {
+      "Vitorias": 12,
+      "Corridas":128,
+      "Podios": 23,
+      "Pontos": 801
+    }
+  },
+  
+  "carta03":{
+    "nome": "Norman Nato",
+    "equipe":"Nissan",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/4e287a6d-e2da-471a-9c8a-01141d6a1819/candid/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 1,
+      "Corridas":49,
+      "Podios": 3,
+      "Pontos": 164
+    }
+  },
+  
+  "carta04":{
+    "nome": "Taylor Barnard",
+    "equipe":"Mclaren",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 0,
+      "Corridas":3,
+      "Podios": 0,
+      "Pontos": 5
+    }
+  },
+  
+  "carta05":{
+    "nome": "Sam Bird",
+    "equipe":"Mclaren",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/dbd8e835-4091-4449-a94d-9dd5e064ac79.png",
+    "atributos": {
+      "Vitorias": 12,
+      "Corridas":125,
+      "Podios": 27,
+      "Pontos":885
+    }
+  },
+  
+  "carta06":{
+    "nome": "Nico Muller",
+    "equipe": "Andretti",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/d8e6e6f6-4bce-4848-860b-8d88383983d1.png",
+    "atributos": {
+      "Vitorias": 0,
+      "Corridas":46,
+      "Podios": 1,
+      "Pontos": 97
+    }
+  },
+  
+
+  "carta07":{
+    "nome": "Zane Maloney",
+    "equipe":  "Lola Yamaha ABT", 
+    "avatar":    "https://static-files.formula-e.pulselive.com/drivers/4e287a6d-e2da-471a-9c8a-01141d6a1819/candid/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 0,
+      "Corridas":0,
+      "Podios": 0,
+      "Pontos": 0
+    }
+  },
+  
+  "carta08":{
+    "nome": "Sebastien Buemi",
+    "equipe": "Envision Racing",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/d001837f-806a-4ccf-adac-3f5dccee21ed.png",
+    "atributos": {
+      "Vitorias": 13,
+      "Corridas":127,
+      "Podios": 32,
+      "Pontos": 991
+    }
+  },
+  
+  "carta09":{
+    "nome": "Robin Frijns",
+    "equipe":"Envision Racing",
+    "avatar":  "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/ba3d3d66-41de-4b1e-bfd6-7f318b2ec2af.png",
+    "atributos": {
+      "Vitorias": 2,
+      "Corridas":102,
+      "Podios": 16,
+      "Pontos": 520
+    }
+  },
+  
+  "carta10":{
+    "nome": "Maximilian Gunther",
+    "equipe":"DS Penske",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/a4aa14e5-3812-425a-a4b6-310b4ad7023c.png",
+    "atributos": {
+      "Vitorias": 5,
+      "Corridas":83,
+      "Podios": 10,
+      "Pontos": 335
+    }
+  },
+  
+  "carta11":{
+    "nome": "Oliver Rowland",
+    "equipe":"Nissan",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/00098f8a-69be-4f84-a7ac-baedcc5f9e9c.png",
+    "atributos": {
+      "Vitorias": 3,
+      "Corridas":78,
+      "Podios": 13,
+      "Pontos": 428
+    }
+  },
+  
+  "carta12":{
+    "nome": "Edoardo Mortara",
+    "equipe":"Mahindra",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/4e287a6d-e2da-471a-9c8a-01141d6a1819/candid/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 6,
+      "Corridas":95,
+      "Podios": 13,
+      "Pontos": 451
+    }
+  },
+  
+  "carta13":{
+    "nome": "Jake Dennis",
+    "equipe": " Andretti",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/6c47b61a-5bb4-4ae4-9e0a-63a411de0782.png",
+    "atributos": {
+      "Vitorias": 6,
+      "Corridas":63,
+      "Podios": 21,
+      "Pontos": 568
+    }
+  },
+  
+  "carta14":{
+    "nome": "Pascal Wherlein",
+    "equipe":"TAG Heuer Porsche Formula E Team ",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4b62fd44-831d-4b01-9f11-2aaf2c47075c.png",
+    "atributos": {
+      "Vitorias": 7,
+      "Corridas":80,
+      "Podios": 12,
+      "Pontos": 569
+    }
+  },
+  
+  "carta15":{
+    "nome": "Lucas Di Grassi",
+    "equipe":"LOLA YAMAHA ABT",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/4a390151-89af-4931-9907-bcbaabb5a152.png",
+    "atributos": {
+      "Vitorias": 13,
+      "Corridas":131,
+      "Podios": 40,
+      "Pontos": 1045
+    }
+  },
+  
+  "carta16":{
+    "nome": "Nick Cassidy",
+    "equipe":"JAGUAR TCS RACING",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/47579af2-ce5a-4ba9-800b-b6821ca934e3.png",
+    "atributos": {
+      "Vitorias": 7,
+      "Corridas":63,
+      "Podios": 20,
+      "Pontos": 519
+    }
+  },
+   
+  "carta17":{
+    "nome": "Stoffel Vandoorne",
+    "equipe": "MASERATI MSG RACING",
+    "avatar":  "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/3f4d9ccc-0453-410c-8542-225bd2ebf280.png",
+    "atributos": {
+      "Vitorias": 3,
+      "Corridas":87,
+      "Podios": 16,
+      "Pontos": 534
+    }
+  },
+  
+  "carta18":{
+    "nome": "Jean-Eric Vergne",
+    "equipe":"DS PENSKE",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/3d5b4033-31b9-442b-a0b5-183d51ebde5e.png",
+    "atributos": {
+      "Vitorias": 11,
+      "Corridas":130,
+      "Podios": 36,
+      "Pontos": 1133
+    }
+  },
+  
+  "carta19":{
+    "nome": "Mitch Evans",
+    "equipe":"JAGUAR TCS RACING",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/2543b91c-2543-4835-b9fc-17b5fbc79cb1.png",
+    "atributos": {
+      "Vitorias": 12,
+      "Corridas":111,
+      "Podios": 31,
+      "Pontos": 9
+    }
+  },
+  
+  "carta20":{
+    "nome": "Jake Hughes",
+    "equipe": "MASERATI MSG RACING",
+    "avatar":
+      "https://static-files.formula-e.pulselive.com/drivers/84467676-4d5d-4c97-ae07-0b7520bb95ea/right/small/2174278b-4213-4688-9f72-8e982bc87e8e.png",
+    "atributos": {
+      "Vitorias": 0,
+      "Corridas":31,
+      "Podios": 1,
+      "Pontos": 96
+    }
+  },
+  
+  "carta21":{
+    "nome": "TBC",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/4e287a6d-e2da-471a-9c8a-01141d6a1819/candid/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 47,
+      "Corridas":0,
+      "Podios": 39,
+      "Pontos": 20
+    }
+  },
+  
+  "carta22":{
+    "nome": "TBC",
+    "avatar": "https://static-files.formula-e.pulselive.com/drivers/4e287a6d-e2da-471a-9c8a-01141d6a1819/candid/small/dc2f3772-e0d8-4e10-9948-d6c23a35e501.png",
+    "atributos": {
+      "Vitorias": 60,
+      "Corridas":0,
+      "Podios": 1,
+      "Pontos": 1
+    }
+  }
+}
